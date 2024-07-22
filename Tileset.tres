@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://b37dm7eekdlc1"]
 
-[ext_resource type="Texture2D" uid="uid://b7wqlif6nq6yo" path="res://GoDot/tilemapBASE.png" id="1_jxilb"]
+[ext_resource type="Texture2D" uid="uid://b7wqlif6nq6yo" path="res://assets/tilemapBASE.png" id="1_jxilb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xnf0q"]
 resource_name = "Earth Room 1"

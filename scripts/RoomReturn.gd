@@ -12,4 +12,4 @@ func _on_body_exited(_body):
 func _physics_process(_delta):
 	if space == true:
 		if Input.is_action_just_pressed("ui_select"):
-			get_tree().change_scene_to_file("res://GoDot/Room_4.tscn")
+			get_tree().change_scene_to_file("res://scenes/MainRoomScene.tscn")
