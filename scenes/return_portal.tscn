@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c231qntuqyo3i"]
+[gd_scene load_steps=7 format=3 uid="uid://c231qntuqyo3i"]
 
 [ext_resource type="Script" path="res://scripts/RoomReturn.gd" id="1_ywsnf"]
 [ext_resource type="Texture2D" uid="uid://b7wqlif6nq6yo" path="res://assets/tilemapBASE.png" id="2_a7krl"]
+[ext_resource type="PackedScene" uid="uid://de3ccla15ytt8" path="res://scenes/portal_teleport.tscn" id="3_1p2f6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u7fvy"]
 atlas = ExtResource("2_a7krl")
@@ -33,6 +34,8 @@ sprite_frames = SubResource("SpriteFrames_esnvv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_16fpn")
+
+[node name="PortalTeleport" parent="." instance=ExtResource("3_1p2f6")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
