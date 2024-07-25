@@ -22,7 +22,7 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	else:
 		if (velocity.x > 1 || velocity.x < -1):
-			animated_sprite_2d.animation = "default"
+			animated_sprite_2d.animation = "walk"
 		else:
 			animated_sprite_2d.animation = "idle"
 		
