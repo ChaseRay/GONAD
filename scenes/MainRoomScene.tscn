@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bpqucagj1ft53"]
+[gd_scene load_steps=24 format=3 uid="uid://bpqucagj1ft53"]
 
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="1_7quo2"]
 [ext_resource type="Script" path="res://scripts/Portal 1.gd" id="2_5ogdd"]
@@ -8,6 +8,14 @@
 [ext_resource type="Script" path="res://scripts/Portal 3.gd" id="5_6sivp"]
 [ext_resource type="Script" path="res://scripts/Portal 4.gd" id="6_liuu1"]
 [ext_resource type="PackedScene" uid="uid://cmxe1eeb7vcuu" path="res://scenes/main_character.tscn" id="7_qu0lw"]
+[ext_resource type="Texture2D" uid="uid://dimi4pnalwbp5" path="res://assets/greyairsigil.png" id="9_d6by3"]
+[ext_resource type="Texture2D" uid="uid://bkofk1e3llr8s" path="res://assets/airsigil.png" id="9_xa7ka"]
+[ext_resource type="Texture2D" uid="uid://cti8ru4gxpkxo" path="res://assets/firesigil.png" id="10_76gl7"]
+[ext_resource type="Texture2D" uid="uid://bjjgdlec3432c" path="res://assets/earthsigil.png" id="11_5kvmn"]
+[ext_resource type="Texture2D" uid="uid://bl3xbv2c2644l" path="res://assets/greyfiresigil.png" id="11_rkvce"]
+[ext_resource type="Texture2D" uid="uid://cxx1nqyhkvnnt" path="res://assets/watersigil.png" id="12_okcd1"]
+[ext_resource type="Texture2D" uid="uid://djxac1upsv4hr" path="res://assets/greyearthsigil.png" id="13_4p4fd"]
+[ext_resource type="Texture2D" uid="uid://ctaw7coyuh24p" path="res://assets/greywatersigil.png" id="15_v4soh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7iw7j"]
 atlas = ExtResource("3_pr87y")
@@ -120,7 +128,59 @@ shape = SubResource("CapsuleShape2D_87fxt")
 
 [node name="PortalTeleport" parent="Portal 4" instance=ExtResource("4_lueen")]
 
+[node name="AirSigil" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -47)
+scale = Vector2(2, 2)
+texture = ExtResource("9_xa7ka")
+
+[node name="AirWaystone" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-273, -77)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_d6by3")
+
+[node name="FireSigil" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0, -47)
+scale = Vector2(2, 2)
+texture = ExtResource("10_76gl7")
+
+[node name="FireWaystone" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(293, -76)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_rkvce")
+
+[node name="EarthSigil" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0, -47)
+scale = Vector2(2, 2)
+texture = ExtResource("11_5kvmn")
+
+[node name="EarthWaystone" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-744, -76)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_4p4fd")
+
+[node name="WaterSigil" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(0, -47)
+scale = Vector2(2, 2)
+texture = ExtResource("12_okcd1")
+
+[node name="WaterWaystone" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(787, -75)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_v4soh")
+
 [node name="MainCharacter" parent="." instance=ExtResource("7_qu0lw")]
+position = Vector2(0, -56)
 
 [connection signal="body_entered" from="Portal 1" to="Portal 1" method="_on_body_entered"]
 [connection signal="body_exited" from="Portal 1" to="Portal 1" method="_on_body_exited"]

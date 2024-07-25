@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -300.0
 var count = 0
+var jumping = false
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
@@ -19,6 +20,11 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	else:
+		if (velocity.x > 1 || velocity.x < -1):
+			animated_sprite_2d.animation = "walk"
+		else:
+			animated_sprite_2d.animation = "idle"
 		
 
 	# Handle jump.
