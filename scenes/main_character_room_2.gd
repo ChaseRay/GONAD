@@ -46,6 +46,9 @@ func _physics_process(delta):
 		animated_sprite_2d.flip_h = true
 	elif facingRight:
 		animated_sprite_2d.flip_h = false
+	
+	if Input.is_action_just_pressed("dash"):
+		velocity.x = direction * SPEED * 10
 
 	move_and_slide()
 	
