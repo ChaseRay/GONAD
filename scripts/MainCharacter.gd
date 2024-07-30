@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -325.0
 var count = 0
+var push_force = 25.0
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
@@ -30,6 +31,10 @@ func _physics_process(delta):
 		animated_sprite_2d.animation = "jump"
 		velocity.y = JUMP_VELOCITY
 		count = 0
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -48,4 +53,6 @@ func _physics_process(delta):
 		animated_sprite_2d.flip_h = false
 
 	move_and_slide()
+	
+
 	
