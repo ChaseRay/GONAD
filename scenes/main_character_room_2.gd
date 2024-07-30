@@ -1,9 +1,12 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -300.0
 var count = 0
+
+const DASH_SPEED = 600
+var dashing = false
+var can_dash = true
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
@@ -33,9 +36,12 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+	var x_direction = Input.get_axis("ui_left", "ui_right")
+	if x_direction:
+		if dashing:
+			velocity.x = x_direction * DASH_SPEED
+		else:
+			velocity.x = x_direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
@@ -47,8 +53,22 @@ func _physics_process(delta):
 	elif facingRight:
 		animated_sprite_2d.flip_h = false
 	
-	if Input.is_action_just_pressed("dash"):
-		velocity.x = direction * SPEED * 10
+	if Input.is_action_just_pressed("dash") and can_dash:
+		dashing = true
+		can_dash = false
+		
+		if (velocity.y != 0):
+			velocity.y = -DASH_SPEED / 1.5
+		$dash_timer.start()
+		$dash_buffer.start()
 
 	move_and_slide()
 	
+
+
+func _on_dash_timer_timeout():
+	dashing = false
+
+
+func _on_dash_buffer_timeout():
+	can_dash = true

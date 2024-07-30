@@ -128,56 +128,60 @@ shape = SubResource("CapsuleShape2D_87fxt")
 
 [node name="PortalTeleport" parent="Portal 4" instance=ExtResource("4_lueen")]
 
-[node name="AirSigil" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(4, -47)
-scale = Vector2(2, 2)
-texture = ExtResource("9_xa7ka")
+[node name="Waystones" type="Node2D" parent="."]
 
-[node name="AirWaystone" type="Sprite2D" parent="."]
+[node name="AirWaystone" type="Sprite2D" parent="Waystones"]
 texture_filter = 1
 position = Vector2(-273, -77)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_d6by3")
 
-[node name="FireSigil" type="Sprite2D" parent="."]
+[node name="FireWaystone" type="Sprite2D" parent="Waystones"]
+texture_filter = 1
+position = Vector2(293, -76)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_rkvce")
+
+[node name="EarthWaystone" type="Sprite2D" parent="Waystones"]
+texture_filter = 1
+position = Vector2(-744, -76)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_4p4fd")
+
+[node name="WaterWaystone" type="Sprite2D" parent="Waystones"]
+texture_filter = 1
+position = Vector2(787, -75)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_v4soh")
+
+[node name="Sigils" type="Node2D" parent="."]
+
+[node name="AirSigil" type="Sprite2D" parent="Sigils"]
+texture_filter = 1
+position = Vector2(4, -47)
+scale = Vector2(2, 2)
+texture = ExtResource("9_xa7ka")
+
+[node name="FireSigil" type="Sprite2D" parent="Sigils"]
 visible = false
 texture_filter = 1
 position = Vector2(0, -47)
 scale = Vector2(2, 2)
 texture = ExtResource("10_76gl7")
 
-[node name="FireWaystone" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(293, -76)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_rkvce")
-
-[node name="EarthSigil" type="Sprite2D" parent="."]
+[node name="EarthSigil" type="Sprite2D" parent="Sigils"]
 visible = false
 texture_filter = 1
 position = Vector2(0, -47)
 scale = Vector2(2, 2)
 texture = ExtResource("11_5kvmn")
 
-[node name="EarthWaystone" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-744, -76)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("13_4p4fd")
-
-[node name="WaterSigil" type="Sprite2D" parent="."]
+[node name="WaterSigil" type="Sprite2D" parent="Sigils"]
 visible = false
 texture_filter = 1
 position = Vector2(0, -47)
 scale = Vector2(2, 2)
 texture = ExtResource("12_okcd1")
-
-[node name="WaterWaystone" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(787, -75)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("15_v4soh")
 
 [node name="MainCharacter" parent="." instance=ExtResource("7_qu0lw")]
 position = Vector2(0, -55)
