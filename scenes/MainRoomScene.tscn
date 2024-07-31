@@ -1,4 +1,6 @@
+
 [gd_scene load_steps=26 format=3 uid="uid://bpqucagj1ft53"]
+
 
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="1_7quo2"]
 [ext_resource type="Script" path="res://scripts/Portal 1.gd" id="2_5ogdd"]
