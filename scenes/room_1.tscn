@@ -122,7 +122,7 @@ position = Vector2(1440, 396)
 shape = SubResource("RectangleShape2D_6s0xm")
 
 [node name="box1" type="RigidBody2D" parent="."]
-position = Vector2(1191, 338)
+position = Vector2(1199, 337)
 can_sleep = false
 lock_rotation = true
 
