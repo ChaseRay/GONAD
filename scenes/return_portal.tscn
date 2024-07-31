@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c231qntuqyo3i"]
+[gd_scene load_steps=7 format=3 uid="uid://c231qntuqyo3i"]
 
 [ext_resource type="Script" path="res://scripts/RoomReturn.gd" id="1_ywsnf"]
 [ext_resource type="Texture2D" uid="uid://b7wqlif6nq6yo" path="res://assets/tilemapBASE.png" id="2_a7krl"]
 [ext_resource type="PackedScene" uid="uid://de3ccla15ytt8" path="res://scenes/portal_teleport.tscn" id="3_1p2f6"]
-[ext_resource type="AudioStream" uid="uid://c0rcls30cjqh7" path="res://assets/audio/(Sound) Portal Teleport.wav" id="4_p1gap"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u7fvy"]
 atlas = ExtResource("2_a7krl")
@@ -37,10 +36,6 @@ sprite_frames = SubResource("SpriteFrames_esnvv")
 shape = SubResource("CapsuleShape2D_16fpn")
 
 [node name="PortalTeleport" parent="." instance=ExtResource("3_1p2f6")]
-
-[node name="Portal" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_p1gap")
-pitch_scale = 4.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
