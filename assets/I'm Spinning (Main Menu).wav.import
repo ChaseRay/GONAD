@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dbwwm6l6rvh8j"
-path="res://.godot/imported/I'm Spinning (Main Menu).wav-db3627d32b2f871929498e90c1fc0b39.sample"
+path="res://.godot/imported/I'm Spinning (Main Menu).wav-da393d1e579a06fca8e8eb399780ee7b.sample"
 
 [deps]
 
-source_file="res://scenes/I'm Spinning (Main Menu).wav"
-dest_files=["res://.godot/imported/I'm Spinning (Main Menu).wav-db3627d32b2f871929498e90c1fc0b39.sample"]
+source_file="res://assets/I'm Spinning (Main Menu).wav"
+dest_files=["res://.godot/imported/I'm Spinning (Main Menu).wav-da393d1e579a06fca8e8eb399780ee7b.sample"]
 
 [params]
 
