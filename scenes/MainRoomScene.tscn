@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=26 format=3 uid="uid://bpqucagj1ft53"]
-
+[gd_scene load_steps=25 format=3 uid="uid://bpqucagj1ft53"]
 
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="1_7quo2"]
 [ext_resource type="Script" path="res://scripts/Portal 1.gd" id="2_5ogdd"]
@@ -19,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://cxx1nqyhkvnnt" path="res://assets/watersigil.png" id="12_okcd1"]
 [ext_resource type="Texture2D" uid="uid://djxac1upsv4hr" path="res://assets/greyearthsigil.png" id="13_4p4fd"]
 [ext_resource type="Texture2D" uid="uid://ctaw7coyuh24p" path="res://assets/greywatersigil.png" id="15_v4soh"]
-[ext_resource type="AudioStream" uid="uid://cnmacimqqnp1s" path="res://scenes/Quirky (Main Room).wav" id="18_tjh1i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7iw7j"]
 atlas = ExtResource("3_pr87y")
@@ -205,11 +202,6 @@ texture = ExtResource("12_okcd1")
 
 [node name="MainCharacter" parent="." instance=ExtResource("7_qu0lw")]
 position = Vector2(0, -55)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("18_tjh1i")
-autoplay = true
-bus = &"muzik"
 
 [connection signal="body_entered" from="Portal 1" to="Portal 1" method="_on_body_entered"]
 [connection signal="body_exited" from="Portal 1" to="Portal 1" method="_on_body_exited"]
