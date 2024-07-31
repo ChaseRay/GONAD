@@ -1,9 +1,9 @@
 [gd_scene load_steps=29 format=3 uid="uid://cmxe1eeb7vcuu"]
 
 [ext_resource type="Script" path="res://scripts/MainCharacter.gd" id="1_t466k"]
-[ext_resource type="Texture2D" uid="uid://b8e42r56xuguh" path="res://assets/spritesheets/idle.png" id="2_bikdq"]
-[ext_resource type="Texture2D" uid="uid://b6dqxar51443" path="res://assets/spritesheets/guySpriteSheet.png" id="3_xjdjq"]
-[ext_resource type="Texture2D" uid="uid://dwavnkkcwsk1p" path="res://assets/spritesheets/walk.png" id="4_bxjgf"]
+[ext_resource type="Texture2D" uid="uid://b8e42r56xuguh" path="res://assets/idle.png" id="2_bikdq"]
+[ext_resource type="Texture2D" uid="uid://b6dqxar51443" path="res://assets/guySpriteSheet.png" id="3_xjdjq"]
+[ext_resource type="Texture2D" uid="uid://dwavnkkcwsk1p" path="res://assets/walk.png" id="4_bxjgf"]
 [ext_resource type="AudioStream" uid="uid://dqoxhud0qnxg0" path="res://assets/audio/(Sound) Jump.wav" id="5_toak3"]
 [ext_resource type="AudioStream" uid="uid://mrm6ninbjr3y" path="res://assets/audio/(Sound) Walk.wav" id="6_6qr3d"]
 

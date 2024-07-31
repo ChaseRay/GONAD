@@ -4,13 +4,13 @@
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="2_vr7os"]
 [ext_resource type="Script" path="res://scenes/ButtonCollision.gd" id="4_cr1sc"]
 [ext_resource type="PackedScene" uid="uid://cmxe1eeb7vcuu" path="res://scenes/main_character.tscn" id="4_pvj68"]
-[ext_resource type="Texture2D" uid="uid://cx70wli4cnm2a" path="res://assets/earthBLOCK2.png" id="6_0rdgy"]
-[ext_resource type="Texture2D" uid="uid://bnosls1b3cfc0" path="res://assets/earthBLOCK1.png" id="6_u4nsv"]
-[ext_resource type="Texture2D" uid="uid://bkpy7auib6vel" path="res://assets/earthBLOCK3.png" id="7_uryx7"]
-[ext_resource type="Texture2D" uid="uid://brbi4txm62mao" path="res://assets/earthBLOCK4.png" id="8_0yrrc"]
-[ext_resource type="Texture2D" uid="uid://b3pmm8j0ut1y6" path="res://assets/earthBLOCK5.png" id="9_j5q88"]
-[ext_resource type="Texture2D" uid="uid://b6d8gworov8ax" path="res://assets/earthBLOCK6.png" id="10_xp6v8"]
-[ext_resource type="Texture2D" uid="uid://cb1pcaasfuah0" path="res://assets/FIREfloor.png" id="11_8kv5f"]
+[ext_resource type="Texture2D" uid="uid://cj2udyjaqmjp5" path="res://assets/earthBLOCK2.png" id="6_0rdgy"]
+[ext_resource type="Texture2D" uid="uid://cu17x3mcaq83d" path="res://assets/earthBLOCK1.png" id="6_u4nsv"]
+[ext_resource type="Texture2D" uid="uid://cyx34f462npye" path="res://assets/earthBLOCK3.png" id="7_uryx7"]
+[ext_resource type="Texture2D" uid="uid://csy1ar3tqxnxh" path="res://assets/earthBLOCK4.png" id="8_0yrrc"]
+[ext_resource type="Texture2D" uid="uid://breobyocshf2k" path="res://assets/earthBLOCK5.png" id="9_j5q88"]
+[ext_resource type="Texture2D" uid="uid://0sdw6lsnc6rf" path="res://assets/earthBLOCK6.png" id="10_xp6v8"]
+[ext_resource type="Texture2D" uid="uid://bqpfq7y5ihar0" path="res://assets/FIREfloor.png" id="11_8kv5f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6s0xm"]
 size = Vector2(62, 102)
@@ -85,7 +85,7 @@ size = Vector2(61, 97)
 size = Vector2(62, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hf5uo"]
-size = Vector2(48, 23)
+size = Vector2(48, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j420s"]
 size = Vector2(48, 23)
@@ -144,7 +144,7 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("6_0rdgy")
 
 [node name="box3" type="RigidBody2D" parent="."]
-position = Vector2(2081, 277)
+position = Vector2(2083, 256)
 can_sleep = false
 lock_rotation = true
 
@@ -181,7 +181,7 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("9_j5q88")
 
 [node name="box6" type="RigidBody2D" parent="."]
-position = Vector2(2869, 171)
+position = Vector2(2869, 165)
 can_sleep = false
 lock_rotation = true
 
@@ -238,7 +238,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("11_8kv5f")
 
 [node name="StaticBody2D16" type="StaticBody2D" parent="."]
-position = Vector2(1955, 357)
+position = Vector2(1951, 351)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D16"]
 position = Vector2(0, 13)
@@ -249,7 +249,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("11_8kv5f")
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="."]
-position = Vector2(2081, 308)
+position = Vector2(2083, 294)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14"]
 position = Vector2(0, 13)
@@ -260,7 +260,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("11_8kv5f")
 
 [node name="StaticBody2D15" type="StaticBody2D" parent="."]
-position = Vector2(2030, 308)
+position = Vector2(2032, 294)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D15"]
 position = Vector2(0, 13)
@@ -398,7 +398,7 @@ shape = SubResource("RectangleShape2D_dtsd4")
 position = Vector2(472, 283)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2(0, 13.5)
+position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_hf5uo")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
