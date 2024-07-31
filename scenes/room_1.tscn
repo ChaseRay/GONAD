@@ -85,7 +85,7 @@ size = Vector2(61, 97)
 size = Vector2(62, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hf5uo"]
-size = Vector2(48, 23)
+size = Vector2(48, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j420s"]
 size = Vector2(48, 23)
@@ -144,7 +144,7 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("6_0rdgy")
 
 [node name="box3" type="RigidBody2D" parent="."]
-position = Vector2(2081, 277)
+position = Vector2(2083, 256)
 can_sleep = false
 lock_rotation = true
 
@@ -181,7 +181,7 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("9_j5q88")
 
 [node name="box6" type="RigidBody2D" parent="."]
-position = Vector2(2869, 171)
+position = Vector2(2869, 165)
 can_sleep = false
 lock_rotation = true
 
@@ -238,7 +238,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("11_8kv5f")
 
 [node name="StaticBody2D16" type="StaticBody2D" parent="."]
-position = Vector2(1955, 357)
+position = Vector2(1951, 351)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D16"]
 position = Vector2(0, 13)
@@ -249,7 +249,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("11_8kv5f")
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="."]
-position = Vector2(2081, 308)
+position = Vector2(2083, 294)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14"]
 position = Vector2(0, 13)
@@ -260,7 +260,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("11_8kv5f")
 
 [node name="StaticBody2D15" type="StaticBody2D" parent="."]
-position = Vector2(2030, 308)
+position = Vector2(2032, 294)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D15"]
 position = Vector2(0, 13)
@@ -398,7 +398,7 @@ shape = SubResource("RectangleShape2D_dtsd4")
 position = Vector2(472, 283)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2(0, 13.5)
+position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_hf5uo")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
