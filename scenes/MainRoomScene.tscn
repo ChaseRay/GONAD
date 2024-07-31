@@ -1,8 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://bpqucagj1ft53"]
+[gd_scene load_steps=33 format=3 uid="uid://bpqucagj1ft53"]
 
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="1_7quo2"]
 [ext_resource type="Script" path="res://scripts/Portal 1.gd" id="2_5ogdd"]
-[ext_resource type="Texture2D" uid="uid://b7wqlif6nq6yo" path="res://assets/tilemapBASE.png" id="3_pr87y"]
+[ext_resource type="Texture2D" uid="uid://eqd4mau7khi0" path="res://assets/portalbaseANIMATE.png" id="3_oh6yq"]
 [ext_resource type="Script" path="res://scripts/Portal 2.gd" id="4_adqqg"]
 [ext_resource type="PackedScene" uid="uid://de3ccla15ytt8" path="res://scenes/portal_teleport.tscn" id="4_lueen"]
 [ext_resource type="Script" path="res://scripts/Portal 3.gd" id="5_6sivp"]
@@ -17,36 +17,78 @@
 [ext_resource type="Texture2D" uid="uid://cxx1nqyhkvnnt" path="res://assets/watersigil.png" id="12_okcd1"]
 [ext_resource type="Texture2D" uid="uid://djxac1upsv4hr" path="res://assets/greyearthsigil.png" id="13_4p4fd"]
 [ext_resource type="Texture2D" uid="uid://ctaw7coyuh24p" path="res://assets/greywatersigil.png" id="15_v4soh"]
+[ext_resource type="Texture2D" uid="uid://bout6vn1fq8b8" path="res://assets/PLAYERLIGHTTT.webp" id="18_cn7ow"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7iw7j"]
-atlas = ExtResource("3_pr87y")
-region = Rect2(64, 192, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_exoji"]
+atlas = ExtResource("3_oh6yq")
+region = Rect2(0, 0, 640, 640)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r315n"]
-atlas = ExtResource("3_pr87y")
-region = Rect2(64, 192, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb81t"]
+atlas = ExtResource("3_oh6yq")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jueq7"]
+atlas = ExtResource("3_oh6yq")
+region = Rect2(0, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hp03"]
+atlas = ExtResource("3_oh6yq")
+region = Rect2(640, 640, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lksew"]
+atlas = ExtResource("3_oh6yq")
+region = Rect2(0, 1280, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohrux"]
+atlas = ExtResource("3_oh6yq")
+region = Rect2(640, 1280, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgo4r"]
+atlas = ExtResource("3_oh6yq")
+region = Rect2(0, 1920, 640, 640)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ohanm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7iw7j")
+"texture": SubResource("AtlasTexture_exoji")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r315n")
+"texture": SubResource("AtlasTexture_eb81t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jueq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hp03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lksew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohrux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgo4r")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5inxi"]
 radius = 32.0
 height = 146.0
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rdch8"]
+polygon = PackedVector2Array(1475, -48, 1538, -48, 1538, 32, 1474, 31)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h5una"]
 radius = 32.0
 height = 138.0
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mvk5u"]
+polygon = PackedVector2Array(-30, -40, 35, -40, 34, 41, -29, 41)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nftdm"]
 radius = 34.0
@@ -57,6 +99,9 @@ radius = 36.0
 height = 122.0
 
 [node name="MainRoomScene" type="Node2D"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.298039, 0.32549, 0.368627, 1)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -72,8 +117,9 @@ script = ExtResource("2_5ogdd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Portal 1"]
 position = Vector2(-2, -1)
-scale = Vector2(1.46875, 1.46875)
+scale = Vector2(0.147, 0.147)
 sprite_frames = SubResource("SpriteFrames_ohanm")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal 1"]
 position = Vector2(-1, 0)
@@ -85,6 +131,10 @@ shape = SubResource("CapsuleShape2D_5inxi")
 stream = ExtResource("6_2ekgd")
 pitch_scale = 4.0
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Portal 1"]
+position = Vector2(-471, 3)
+occluder = SubResource("OccluderPolygon2D_rdch8")
+
 [node name="Portal 2" type="Area2D" parent="."]
 texture_filter = 1
 position = Vector2(-275, -13)
@@ -92,8 +142,9 @@ script = ExtResource("4_adqqg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Portal 2"]
 position = Vector2(2, 2)
-scale = Vector2(1.46875, 1.46875)
+scale = Vector2(0.147, 0.147)
 sprite_frames = SubResource("SpriteFrames_ohanm")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal 2"]
 position = Vector2(1, 1)
@@ -105,6 +156,9 @@ shape = SubResource("CapsuleShape2D_h5una")
 stream = ExtResource("6_2ekgd")
 pitch_scale = 4.0
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Portal 2"]
+occluder = SubResource("OccluderPolygon2D_mvk5u")
+
 [node name="Portal 3" type="Area2D" parent="."]
 texture_filter = 1
 position = Vector2(294, -9)
@@ -112,8 +166,9 @@ script = ExtResource("5_6sivp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Portal 3"]
 position = Vector2(-0.999999, -5)
-scale = Vector2(1.46875, 1.46875)
+scale = Vector2(0.147, 0.147)
 sprite_frames = SubResource("SpriteFrames_ohanm")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal 3"]
 position = Vector2(-2, -1)
@@ -125,6 +180,10 @@ shape = SubResource("CapsuleShape2D_nftdm")
 stream = ExtResource("6_2ekgd")
 pitch_scale = 4.0
 
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Portal 3"]
+position = Vector2(-1041, -2)
+occluder = SubResource("OccluderPolygon2D_mvk5u")
+
 [node name="Portal 4" type="Area2D" parent="."]
 texture_filter = 1
 position = Vector2(788, -11)
@@ -132,8 +191,9 @@ script = ExtResource("6_liuu1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Portal 4"]
 position = Vector2(-1, 1)
-scale = Vector2(1.46875, 1.46875)
+scale = Vector2(0.147, 0.147)
 sprite_frames = SubResource("SpriteFrames_ohanm")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal 4"]
 position = Vector2(-2, 5)
@@ -144,6 +204,10 @@ shape = SubResource("CapsuleShape2D_87fxt")
 [node name="Portal" type="AudioStreamPlayer2D" parent="Portal 4"]
 stream = ExtResource("6_2ekgd")
 pitch_scale = 4.0
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Portal 4"]
+position = Vector2(-4, 1)
+occluder = SubResource("OccluderPolygon2D_mvk5u")
 
 [node name="Waystones" type="Node2D" parent="."]
 
@@ -201,7 +265,12 @@ scale = Vector2(2, 2)
 texture = ExtResource("12_okcd1")
 
 [node name="MainCharacter" parent="." instance=ExtResource("7_qu0lw")]
-position = Vector2(0, -55)
+position = Vector2(2, 10)
+
+[node name="PointLight2D" type="PointLight2D" parent="MainCharacter"]
+energy = 0.7
+shadow_enabled = true
+texture = ExtResource("18_cn7ow")
 
 [connection signal="body_entered" from="Portal 1" to="Portal 1" method="_on_body_entered"]
 [connection signal="body_exited" from="Portal 1" to="Portal 1" method="_on_body_exited"]
