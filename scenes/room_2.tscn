@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvhdtfstqa8ui"]
+[gd_scene load_steps=8 format=3 uid="uid://dvhdtfstqa8ui"]
 
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="1_4mbau"]
 [ext_resource type="Texture2D" uid="uid://c00wo5jli7862" path="res://assets/background_glacial_mountains_lightened.png" id="2_cnr6n"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cmxe1eeb7vcuu" path="res://scenes/main_character.tscn" id="4_8hydm"]
 [ext_resource type="Script" path="res://scenes/main_character_room_2.gd" id="4_q10uc"]
 [ext_resource type="AudioStream" uid="uid://qsyxbbho45wr" path="res://assets/audio/Updraft (Air).wav" id="6_44ire"]
+[ext_resource type="AudioStream" uid="uid://c021a7f5megc1" path="res://assets/audio/(Sound) Dash.wav" id="7_4ml84"]
 
 [node name="Room 2" type="Node2D"]
 
@@ -13,7 +14,7 @@
 follow_viewport_enabled = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.25, 0.25)
+motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(768, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
@@ -40,11 +41,12 @@ wait_time = 0.2
 
 [node name="dash_buffer" type="Timer" parent="Character Room 2"]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Character Room 2"]
+[node name="Updraft (Air)" type="AudioStreamPlayer2D" parent="Character Room 2"]
 stream = ExtResource("6_44ire")
 autoplay = true
 
+[node name="Dash" type="AudioStreamPlayer2D" parent="Character Room 2"]
+stream = ExtResource("7_4ml84")
+
 [connection signal="timeout" from="Character Room 2/dash_timer" to="Character Room 2" method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="Character Room 2/dash_buffer" to="Character Room 2" method="_on_dash_buffer_timeout"]
-
-[editable path="Character Room 2"]

@@ -9,6 +9,9 @@ var dashing = false
 var can_dash = true
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var dash = $Dash
+@onready var jump = $Jump
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -32,6 +35,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		animated_sprite_2d.animation = "jump"
 		velocity.y = JUMP_VELOCITY
+		jump.play()
 		count = 0
 
 	# Get the input direction and handle the movement/deceleration.
@@ -59,6 +63,8 @@ func _physics_process(delta):
 		
 		if (velocity.y != 0):
 			velocity.y = -DASH_SPEED / 1.5
+			
+		dash.play()
 		$dash_timer.start()
 		$dash_buffer.start()
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bpqucagj1ft53"]
+[gd_scene load_steps=25 format=3 uid="uid://bpqucagj1ft53"]
 
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="1_7quo2"]
 [ext_resource type="Script" path="res://scripts/Portal 1.gd" id="2_5ogdd"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/Portal 2.gd" id="4_adqqg"]
 [ext_resource type="PackedScene" uid="uid://de3ccla15ytt8" path="res://scenes/portal_teleport.tscn" id="4_lueen"]
 [ext_resource type="Script" path="res://scripts/Portal 3.gd" id="5_6sivp"]
+[ext_resource type="AudioStream" uid="uid://c0rcls30cjqh7" path="res://assets/audio/(Sound) Portal Teleport.wav" id="6_2ekgd"]
 [ext_resource type="Script" path="res://scripts/Portal 4.gd" id="6_liuu1"]
 [ext_resource type="PackedScene" uid="uid://cmxe1eeb7vcuu" path="res://scenes/main_character.tscn" id="7_qu0lw"]
 [ext_resource type="Texture2D" uid="uid://dimi4pnalwbp5" path="res://assets/greyairsigil.png" id="9_d6by3"]
@@ -80,6 +81,10 @@ shape = SubResource("CapsuleShape2D_5inxi")
 
 [node name="PortalTeleport" parent="Portal 1" instance=ExtResource("4_lueen")]
 
+[node name="Portal" type="AudioStreamPlayer2D" parent="Portal 1"]
+stream = ExtResource("6_2ekgd")
+pitch_scale = 4.0
+
 [node name="Portal 2" type="Area2D" parent="."]
 texture_filter = 1
 position = Vector2(-275, -13)
@@ -95,6 +100,10 @@ position = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_h5una")
 
 [node name="PortalTeleport" parent="Portal 2" instance=ExtResource("4_lueen")]
+
+[node name="Portal" type="AudioStreamPlayer2D" parent="Portal 2"]
+stream = ExtResource("6_2ekgd")
+pitch_scale = 4.0
 
 [node name="Portal 3" type="Area2D" parent="."]
 texture_filter = 1
@@ -112,6 +121,10 @@ shape = SubResource("CapsuleShape2D_nftdm")
 
 [node name="PortalTeleport" parent="Portal 3" instance=ExtResource("4_lueen")]
 
+[node name="Portal" type="AudioStreamPlayer2D" parent="Portal 3"]
+stream = ExtResource("6_2ekgd")
+pitch_scale = 4.0
+
 [node name="Portal 4" type="Area2D" parent="."]
 texture_filter = 1
 position = Vector2(788, -11)
@@ -127,6 +140,10 @@ position = Vector2(-2, 5)
 shape = SubResource("CapsuleShape2D_87fxt")
 
 [node name="PortalTeleport" parent="Portal 4" instance=ExtResource("4_lueen")]
+
+[node name="Portal" type="AudioStreamPlayer2D" parent="Portal 4"]
+stream = ExtResource("6_2ekgd")
+pitch_scale = 4.0
 
 [node name="Waystones" type="Node2D" parent="."]
 
