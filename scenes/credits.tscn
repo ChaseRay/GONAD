@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://bn3wpe0ud1lb8"]
+
+[ext_resource type="Script" path="res://scenes/credits.gd" id="1_j1vda"]
+[ext_resource type="Texture2D" uid="uid://bx84n8rmnjtqc" path="res://assets/CREDITS.png" id="1_qooh5"]
+[ext_resource type="AudioStream" uid="uid://bp2wpoyscs5fi" path="res://scenes/untitled.wav" id="3_2qqxr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwovl"]
+atlas = ExtResource("1_qooh5")
+region = Rect2(0, 0, 1344, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sv888"]
+atlas = ExtResource("1_qooh5")
+region = Rect2(0, 768, 1344, 768)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uipro"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwovl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sv888")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j1vda")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uipro")
+autoplay = "default"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.86, 0.845)
+
+[node name="MenuBar" type="MenuBar" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="MenuBar"]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 275.0
+offset_right = 638.0
+offset_bottom = 358.0
+text = "CLICK HERE
+TO GO BACK
+TO MAIN MENU :D"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_2qqxr")
+autoplay = true
+bus = &"muzik"
+
+[connection signal="pressed" from="MenuBar/Button" to="." method="_on_button_pressed"]

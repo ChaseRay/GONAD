@@ -1,0 +1,122 @@
+[gd_scene load_steps=14 format=3 uid="uid://ih5jo4txyu8d"]
+
+[ext_resource type="Texture2D" uid="uid://wxfybdetikei" path="res://assets/MAINMENU.png" id="1_8c2f1"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_ilcm8"]
+[ext_resource type="AudioStream" uid="uid://dbwwm6l6rvh8j" path="res://scenes/I'm Spinning (Main Menu).wav" id="3_w16hm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xif4x"]
+atlas = ExtResource("1_8c2f1")
+region = Rect2(0, 0, 448, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7521x"]
+atlas = ExtResource("1_8c2f1")
+region = Rect2(448, 0, 448, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t85o"]
+atlas = ExtResource("1_8c2f1")
+region = Rect2(896, 0, 448, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68be8"]
+atlas = ExtResource("1_8c2f1")
+region = Rect2(0, 256, 448, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f0rh"]
+atlas = ExtResource("1_8c2f1")
+region = Rect2(448, 256, 448, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqsp3"]
+atlas = ExtResource("1_8c2f1")
+region = Rect2(896, 256, 448, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmfp0"]
+atlas = ExtResource("1_8c2f1")
+region = Rect2(0, 512, 448, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynak4"]
+atlas = ExtResource("1_8c2f1")
+region = Rect2(448, 512, 448, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewd4s"]
+atlas = ExtResource("1_8c2f1")
+region = Rect2(896, 512, 448, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m1d8n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xif4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7521x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t85o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68be8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f0rh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqsp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmfp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynak4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewd4s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="main menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ilcm8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(1.89209, 1.89209)
+sprite_frames = SubResource("SpriteFrames_m1d8n")
+autoplay = "default"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.365, 1.36)
+
+[node name="MenuBar" type="MenuBar" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="MenuBar"]
+layout_mode = 0
+offset_left = -345.0
+offset_top = -57.0
+offset_right = -81.0
+offset_bottom = 61.0
+flat = true
+
+[node name="Button2" type="Button" parent="MenuBar"]
+offset_left = 85.0
+offset_top = -57.0
+offset_right = 347.0
+offset_bottom = 61.0
+flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_w16hm")
+autoplay = true
+bus = &"muzik"
+
+[connection signal="pressed" from="MenuBar/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MenuBar/Button2" to="." method="_on_button_2_pressed"]
