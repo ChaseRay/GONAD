@@ -7,6 +7,9 @@ var count = 0
 var push_force = 20.0
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var jump = $Jump
+@onready var walk = $Walk
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -23,12 +26,18 @@ func _physics_process(delta):
 	else:
 		if (velocity.x > 1 || velocity.x < -1):
 			animated_sprite_2d.animation = "walk"
+			if !walk.playing:
+				walk.play()
 		else:
 			animated_sprite_2d.animation = "idle"
+			walk.stop()
 			
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		animated_sprite_2d.animation = "jump"
+		if walk.playing:
+				walk.stop()
+		jump.play()
 		velocity.y = JUMP_VELOCITY
 		count = 0
 	for i in get_slide_collision_count():
