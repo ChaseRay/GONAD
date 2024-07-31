@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="1_06p16"]
 [ext_resource type="PackedScene" uid="uid://c231qntuqyo3i" path="res://scenes/return_portal.tscn" id="2_qwi3x"]
 [ext_resource type="Script" path="res://scenes/main_character_room_3.gd" id="4_vjkt7"]
-[ext_resource type="PackedScene" path="res://scenes/rigid_body_2d.tscn" id="5_226hj"]
+[ext_resource type="PackedScene" uid="uid://p72w8dciip1e" path="res://scenes/rigid_body_2d.tscn" id="5_226hj"]
 [ext_resource type="PackedScene" uid="uid://cmxe1eeb7vcuu" path="res://scenes/main_character.tscn" id="5_cl807"]
 
 [node name="Room 3" type="Node2D"]
