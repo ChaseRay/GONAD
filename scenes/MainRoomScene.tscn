@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://djxac1upsv4hr" path="res://assets/greyearthsigil.png" id="13_4p4fd"]
 [ext_resource type="Texture2D" uid="uid://ctaw7coyuh24p" path="res://assets/greywatersigil.png" id="15_v4soh"]
 [ext_resource type="Texture2D" uid="uid://bout6vn1fq8b8" path="res://assets/PLAYERLIGHTTT.webp" id="18_cn7ow"]
-[ext_resource type="AudioStream" uid="uid://cnmacimqqnp1s" path="res://assets/audio/Quirky (Main Room).wav" id="19_ahjoy"]
+[ext_resource type="AudioStream" path="res://assets/audio/Quirky (Main Room).wav" id="19_ahjoy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_exoji"]
 atlas = ExtResource("3_oh6yq")
@@ -245,21 +245,18 @@ scale = Vector2(2, 2)
 texture = ExtResource("9_xa7ka")
 
 [node name="FireSigil" type="Sprite2D" parent="Sigils"]
-visible = false
 texture_filter = 1
 position = Vector2(0, -47)
 scale = Vector2(2, 2)
 texture = ExtResource("10_76gl7")
 
 [node name="EarthSigil" type="Sprite2D" parent="Sigils"]
-visible = false
 texture_filter = 1
 position = Vector2(0, -47)
 scale = Vector2(2, 2)
 texture = ExtResource("11_5kvmn")
 
 [node name="WaterSigil" type="Sprite2D" parent="Sigils"]
-visible = false
 texture_filter = 1
 position = Vector2(0, -47)
 scale = Vector2(2, 2)

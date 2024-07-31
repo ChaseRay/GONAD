@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b20xudwfu52no"]
+[gd_scene load_steps=6 format=3 uid="uid://b20xudwfu52no"]
 
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="1_v68oa"]
 [ext_resource type="PackedScene" uid="uid://c231qntuqyo3i" path="res://scenes/return_portal.tscn" id="2_lxghd"]
 [ext_resource type="PackedScene" uid="uid://cmxe1eeb7vcuu" path="res://scenes/main_character.tscn" id="3_5pn6l"]
+[ext_resource type="AudioStream" path="res://assets/audio/Slow Drip (Water).wav" id="4_wbqdm"]
+[ext_resource type="Texture2D" uid="uid://0k2x5fbfp47l" path="res://assets/untitled.png" id="5_ffb1x"]
 
 [node name="Room 4" type="Node2D"]
 
@@ -16,3 +18,187 @@ layer_0/tile_data = PackedInt32Array(-131088, 393217, 0, -131087, 393217, 0, -13
 
 [node name="MainCharacter" parent="." instance=ExtResource("3_5pn6l")]
 position = Vector2(-977, -21)
+
+[node name="water" type="AudioStreamPlayer2D" parent="MainCharacter"]
+stream = ExtResource("4_wbqdm")
+autoplay = true
+
+[node name="untitled" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-882, -101)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-809, -76)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-886, -30)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-718, -126)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled5" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-645, -101)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled6" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-722, -55)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled7" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-554, -87)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled8" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-481, -62)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled9" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-558, -16)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled10" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-390, -112)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled11" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-317, -87)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled12" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-394, -41)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled13" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-206, -96)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled14" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-133, -71)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled15" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-210, -25)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled16" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-42, -121)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled17" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(31, -96)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled18" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-46, -50)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled19" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(122, -82)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled20" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(195, -57)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled21" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(118, -11)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled22" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(286, -107)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled23" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(359, -82)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled24" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(282, -36)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled25" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(445, -102)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled26" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(518, -77)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled27" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(441, -31)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled28" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(609, -127)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled29" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(682, -102)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled30" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(605, -56)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled31" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(773, -88)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled32" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(846, -63)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled33" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(769, -17)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled34" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(937, -113)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled35" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1010, -88)
+texture = ExtResource("5_ffb1x")
+
+[node name="untitled36" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(933, -42)
+texture = ExtResource("5_ffb1x")

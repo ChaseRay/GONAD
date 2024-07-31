@@ -1,10 +1,11 @@
-[gd_scene load_steps=42 format=3 uid="uid://b177hd3jm82ju"]
+[gd_scene load_steps=43 format=3 uid="uid://b177hd3jm82ju"]
 
 [ext_resource type="PackedScene" uid="uid://c231qntuqyo3i" path="res://scenes/return_portal.tscn" id="2_mpwa2"]
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="2_vr7os"]
+[ext_resource type="Texture2D" uid="uid://0k2x5fbfp47l" path="res://assets/untitled.png" id="3_gvn5v"]
 [ext_resource type="Script" path="res://scenes/ButtonCollision.gd" id="4_cr1sc"]
 [ext_resource type="PackedScene" uid="uid://cmxe1eeb7vcuu" path="res://scenes/main_character.tscn" id="4_pvj68"]
-[ext_resource type="AudioStream" uid="uid://drmjqg6enwf0j" path="res://assets/audio/Toil (Earth).wav" id="4_vjj2b"]
+[ext_resource type="AudioStream" path="res://assets/audio/Toil (Earth).wav" id="4_vjj2b"]
 [ext_resource type="Texture2D" uid="uid://cj2udyjaqmjp5" path="res://assets/earthBLOCK2.png" id="6_0rdgy"]
 [ext_resource type="Texture2D" uid="uid://cu17x3mcaq83d" path="res://assets/earthBLOCK1.png" id="6_u4nsv"]
 [ext_resource type="Texture2D" uid="uid://cyx34f462npye" path="res://assets/earthBLOCK3.png" id="7_uryx7"]
@@ -111,6 +112,11 @@ layer_0/tile_data = PackedInt32Array(1114104, 196609, 2, 1114105, 196609, 2, 111
 layer_1/name = "Foreground"
 layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array(393251, 7, 0, 393254, 8, 0, 393259, 9, 0, 393264, 10, 0, 393245, 6, 0)
+
+[node name="untitled" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3088, 235)
+texture = ExtResource("3_gvn5v")
 
 [node name="MainCharacter" parent="." instance=ExtResource("4_pvj68")]
 position = Vector2(-482, 394)
