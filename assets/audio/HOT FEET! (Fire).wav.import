@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ryqou83dxs51"
-path="res://.godot/imported/HOT FEET! (Fire).wav-556f4f9d8e1d44496142e8d4ea592e7b.sample"
+path="res://.godot/imported/HOT FEET! (Fire).wav-20f101e85f0677ee64c4f9131dc1f240.sample"
 
 [deps]
 
-source_file="res://assets/HOT FEET! (Fire).wav"
-dest_files=["res://.godot/imported/HOT FEET! (Fire).wav-556f4f9d8e1d44496142e8d4ea592e7b.sample"]
+source_file="res://assets/audio/HOT FEET! (Fire).wav"
+dest_files=["res://.godot/imported/HOT FEET! (Fire).wav-20f101e85f0677ee64c4f9131dc1f240.sample"]
 
 [params]
 

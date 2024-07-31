@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bjwoqialhyuta"
-path="res://.godot/imported/Slow Drip (Water).wav-0fc17a091e466185092236be14b6e8a3.sample"
+path="res://.godot/imported/Slow Drip (Water).wav-9ddf0678997c8c1c376046b655b1fec6.sample"
 
 [deps]
 
-source_file="res://assets/Slow Drip (Water).wav"
-dest_files=["res://.godot/imported/Slow Drip (Water).wav-0fc17a091e466185092236be14b6e8a3.sample"]
+source_file="res://assets/audio/Slow Drip (Water).wav"
+dest_files=["res://.godot/imported/Slow Drip (Water).wav-9ddf0678997c8c1c376046b655b1fec6.sample"]
 
 [params]
 

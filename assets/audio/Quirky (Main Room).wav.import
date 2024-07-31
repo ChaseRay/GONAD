@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cnmacimqqnp1s"
-path="res://.godot/imported/Quirky (Main Room).wav-ed7678363f27e7bf3dd18938419cf8ba.sample"
+path="res://.godot/imported/Quirky (Main Room).wav-98adcb80a388aee41f52f17be56a5408.sample"
 
 [deps]
 
-source_file="res://scenes/Quirky (Main Room).wav"
-dest_files=["res://.godot/imported/Quirky (Main Room).wav-ed7678363f27e7bf3dd18938419cf8ba.sample"]
+source_file="res://assets/audio/Quirky (Main Room).wav"
+dest_files=["res://.godot/imported/Quirky (Main Room).wav-98adcb80a388aee41f52f17be56a5408.sample"]
 
 [params]
 
