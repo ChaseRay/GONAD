@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvhdtfstqa8ui"]
+[gd_scene load_steps=9 format=3 uid="uid://dvhdtfstqa8ui"]
 
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="1_4mbau"]
 [ext_resource type="Texture2D" uid="uid://c00wo5jli7862" path="res://assets/background_glacial_mountains_lightened.png" id="2_cnr6n"]
+[ext_resource type="Texture2D" uid="uid://0k2x5fbfp47l" path="res://assets/untitled.png" id="2_lkuft"]
 [ext_resource type="PackedScene" uid="uid://c231qntuqyo3i" path="res://scenes/return_portal.tscn" id="2_ojbi5"]
 [ext_resource type="PackedScene" uid="uid://cmxe1eeb7vcuu" path="res://scenes/main_character.tscn" id="4_8hydm"]
 [ext_resource type="Script" path="res://scenes/main_character_room_2.gd" id="4_q10uc"]
@@ -21,6 +22,11 @@ motion_mirroring = Vector2(768, 0)
 position = Vector2(-204, -53)
 scale = Vector2(2, 3.388)
 texture = ExtResource("2_cnr6n")
+
+[node name="untitled" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-66, -131)
+texture = ExtResource("2_lkuft")
 
 [node name="Return Portal" parent="." instance=ExtResource("2_ojbi5")]
 position = Vector2(-1029, -190)

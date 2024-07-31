@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+const SPEED = 200.0
 const JUMP_VELOCITY = -325.0
 const FIREBALL_SPEED = 500.0 
 var count = 0
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var jump = $Jump
+@onready var walk = $Walk
 
 @export var fireball_scene_path: String = "res://scenes/rigid_body_2D.tscn"
 var fireball_scene: PackedScene
@@ -34,13 +36,19 @@ func _physics_process(delta):
 	else:
 		if (velocity.x > 1 || velocity.x < -1):
 			animated_sprite_2d.animation = "walk"
+			if !walk.playing:
+				walk.play()
 		else:
 			animated_sprite_2d.animation = "idle"
+			walk.stop()
 			
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		animated_sprite_2d.animation = "jump"
 		velocity.y = JUMP_VELOCITY
+		if walk.playing:
+				walk.stop()
+		jump.play()
 		count = 0
 		
 	var direction = Input.get_axis("ui_left", "ui_right")

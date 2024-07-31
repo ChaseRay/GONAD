@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dbwwm6l6rvh8j"
+path="res://.godot/imported/I'm Spinning (Main Menu).wav-bbfe3480e0f4fa05420efd5e8a6eb2eb.sample"
+
+[deps]
+
+source_file="res://assets/audio/I'm Spinning (Main Menu).wav"
+dest_files=["res://.godot/imported/I'm Spinning (Main Menu).wav-bbfe3480e0f4fa05420efd5e8a6eb2eb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://cmn5t7bt0sy13"]
+[gd_scene load_steps=16 format=3 uid="uid://cmn5t7bt0sy13"]
 
 [ext_resource type="TileSet" uid="uid://b37dm7eekdlc1" path="res://Tileset.tres" id="1_06p16"]
+[ext_resource type="Texture2D" uid="uid://0k2x5fbfp47l" path="res://assets/untitled.png" id="2_ebxup"]
 [ext_resource type="PackedScene" uid="uid://c231qntuqyo3i" path="res://scenes/return_portal.tscn" id="2_qwi3x"]
 [ext_resource type="Script" path="res://scenes/main_character_room_3.gd" id="4_vjkt7"]
+[ext_resource type="AudioStream" path="res://assets/audio/HOT FEET! (Fire).wav" id="5_2tsva"]
 [ext_resource type="PackedScene" uid="uid://p72w8dciip1e" path="res://scenes/rigid_body_2d.tscn" id="5_226hj"]
 [ext_resource type="PackedScene" uid="uid://cmxe1eeb7vcuu" path="res://scenes/main_character.tscn" id="5_cl807"]
 [ext_resource type="Texture2D" uid="uid://bqpfq7y5ihar0" path="res://assets/FIREfloor.png" id="6_x6jt6"]
@@ -27,6 +29,11 @@ layer_1/name = "Foreground"
 layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array()
 
+[node name="untitled" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1482, -10)
+texture = ExtResource("2_ebxup")
+
 [node name="Return Portal" parent="." instance=ExtResource("2_qwi3x")]
 position = Vector2(-995, -33)
 
@@ -35,6 +42,10 @@ texture_filter = 1
 position = Vector2(-993, -21)
 script = ExtResource("4_vjkt7")
 fireball_scene_path = "res://scenes/rigid_body_2D.tscn"
+
+[node name="fire_tunes" type="AudioStreamPlayer2D" parent="MainCharacter"]
+stream = ExtResource("5_2tsva")
+autoplay = true
 
 [node name="fireball" parent="." instance=ExtResource("5_226hj")]
 visible = false
